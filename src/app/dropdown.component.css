@@ -1,0 +1,14 @@
+.dropdown {
+  position: absolute;
+  z-index: 1000;  /* High z-index to be on top */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.dropdown-content {
+  overflow: auto;
+}

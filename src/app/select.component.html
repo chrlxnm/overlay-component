@@ -1,0 +1,19 @@
+<div class="select-container">
+  <!-- Trigger for the dropdown -->
+  <div class="select-trigger" #trigger (click)="toggleDropdown()">
+    {{ selectedOption || 'Select an option' }}
+  </div>
+
+  <!-- Reusable Dropdown Component -->
+  <app-dropdown
+    [isOpen]="isDropdownOpen"
+    (closed)="closeDropdown()"
+    (selected)="onSelect($event)"
+    [origin]="triggerNativeElement">
+
+    <!-- Project dropdown options dynamically -->
+    <div *ngFor="let option of options" class="dropdown-item" (click)="onSelect(option)">
+      {{ option }}
+    </div>
+  </app-dropdown>
+</div>

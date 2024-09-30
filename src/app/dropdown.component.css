@@ -7,8 +7,33 @@
   max-height: 300px;
   overflow-y: auto;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adding shadow */
+  border-radius: 16px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
-.dropdown-content {
+.dropdown-wrapper {
   overflow: auto;
+  max-height: 284px;
+}
+
+
+/* Custom scrollbar for the .scrollable div */
+.scrollable::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: #eaeaea;
+  border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

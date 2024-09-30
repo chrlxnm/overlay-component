@@ -98,6 +98,8 @@ export class DropdownComponent implements AfterViewInit, OnDestroy, OnChanges {
 
       // Clone and append the content from dropdownTemplate
       const dropdownContent = this.renderer.createElement('div');
+      this.renderer.setAttribute(dropdownContent, 'class', 'dropdown-wrapper scrollable');
+      this.renderer.setStyle(dropdownContent, 'height', 300); // Start with height 0
       this.renderer.appendChild(dropdownContent, this.dropdownElement.createEmbeddedView(null).rootNodes[0]);
       this.renderer.appendChild(this.dropdownContainer, dropdownContent);
 

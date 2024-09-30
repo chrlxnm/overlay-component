@@ -8,6 +8,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
+  width: 400px;
 }
 
 .dropdown-item {
